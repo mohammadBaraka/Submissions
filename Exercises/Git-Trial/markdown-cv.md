@@ -1,5 +1,5 @@
 ## **Mohammad Barakat**
-### Email: **mohammadbarakat342@gmail.com
+### Email: mohammadbarakat342@gmail.com
 ### Phone: 96176445487
 ### DOB : 1/81995
 
