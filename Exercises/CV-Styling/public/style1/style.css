@@ -1,0 +1,103 @@
+
+/*start header*/
+header{
+    background: gray;
+    height: 150px;
+}
+figure
+{
+    position: absolute;
+    left:400px;
+    top:13px;
+}
+hgroup
+{
+    position: absolute;
+    left:200px;  
+    color:red
+}
+/*end header*/
+
+/*start contct*/
+.contacts   
+{
+    position: absolute;
+    right: 10px;
+    top:8px;
+    line-height: 2px;
+    padding-right:40px;
+    background-color: red;
+    width:150px;
+    color:white;
+    border-right: 500px solid black;
+    padding: 5px; 
+    margin-top:10px;;   
+
+}
+.contacts a 
+{
+    color:red;
+    margin-right: 100px;
+    width: 100px;
+}
+
+.contact-value
+{
+    padding-left:150px;
+    width: 150px;   
+        
+}
+/*end contct*/
+
+/*start content*/
+
+.content
+{
+    max-width:1200px;
+    margin: 0 auto;
+    display:grid;
+    grid-template-columns: 50% 50%;
+    padding-top:5px;
+}
+
+#about #experiences ,h3{
+    border-bottom: 2px solid gray
+}
+/*end content*/
+.experience span
+{
+    color: red
+}
+
+.experience-details span
+{
+    color: gray;
+}
+#competencies div
+{
+    background-color: gray;
+    margin-left: 10px;
+    padding: 3px;
+    color: white;
+}
+#competencies .skill 
+{
+    background-color: red;
+    border: 2px solid white;    
+}
+h3::before
+{
+    content: '  \25CF';
+    font-size:30px;
+    color: red;
+    
+}
+#contact h3
+{
+    display: none;  
+}
+#hobbies
+{
+    position: absolute;
+    bottom: -400px
+}

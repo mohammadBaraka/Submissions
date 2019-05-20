@@ -1,0 +1,147 @@
+#\#wrapper
+{
+    max-width: 1250px;
+    margin: 0 auto 0 auto;
+    
+}
+hgroup h1
+{
+display: none
+}
+
+
+
+hgroup::before
+{
+    content: "Mohammad Barakt";
+    font-weight: bold;
+    font-size: 50px;
+    color: red;
+    
+}
+hgroup
+{
+    text-align: center;
+    position: relative;
+    top: 50px;
+}
+
+
+hgroup h2 
+{
+    color: rgb(11, 73, 206);
+}
+
+figure img
+{
+    position: relative;
+    width: 150px;
+    height: 150;
+    bottom: 70px;
+    left:50px;
+    transform: rotate(-30deg);
+    transform:skew(20deg ,10deg);
+    border: 3px solid red;
+    padding: 5px;
+    border-radius: 9px;
+
+}
+.content
+{
+    display: grid;
+    grid-template-areas: 
+    "about experiences"
+    "education competencies"
+    ". hobbies";
+    border: 5px solid black;  
+    padding: 15px;
+    
+    border-radius: 2%;
+    height: 900px;
+    
+    
+}
+.content h3
+{
+    color: red;
+    border-bottom:3px solid black;
+    padding: 10px;
+
+}
+
+
+
+
+#about
+{
+    grid-area: about;
+    width: 80%; 
+
+}
+
+
+#competencies
+{
+    grid-area: competencies;
+    
+    
+}
+
+#experiences
+{
+    grid-area: experiences;
+    
+}
+
+
+#education
+{
+    grid-area: education;
+    position: relative;
+    bottom: 220px;
+    width: 80%
+}
+
+#hobbies
+{
+    grid-area: hobbies;
+    position: relative;
+    right: 95%;
+    bottom: 60%
+ }
+.skills
+{
+    float: right;
+    position: relative;
+    right: 150px;
+    
+}
+
+
+.skill
+{
+    padding: 20px;
+    margin: 20px;
+    border: 2px ;
+    background: rgb(11, 73, 206);
+    color: white
+    
+}
+
+
+
+
+#contact
+{
+    visibility: hidden;
+}
+
+
+
+
+.skill ::after
+{
+    content:"✭ ✭";
+    padding: 5px    
+
+}
