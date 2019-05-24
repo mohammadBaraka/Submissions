@@ -10,4 +10,4 @@ function myfunction(isHidden){
     else if (isHidden){
         y.style.display = "none";
 }
-}
+}   
