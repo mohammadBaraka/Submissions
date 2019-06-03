@@ -1,0 +1,35 @@
+1) Get all the names of students in the database 
+Answer: SELECT ALL name FROM students;
+Alex
+Basma
+Hasan
+Jana
+Layal
+Robert
+
+2) Get all the data of students above 30 years old
+Answer: SELECT ALL name FROM students WHERE Age >30;
+Robert
+Jana
+
+3)Get the names of the females who are 30 years old
+Answer:SELECT name FROM students WHERE Gender = "F" AND Age =30;
+-- At line 1:
+SELECT name FROM students WHERE Gender = "F" AND Age =30;
+-- Result: 0 rows returned in 3ms
+
+4) Get the number of Points of Alex 
+Answer: SELECT Points FROM students WHERE name = "Alex";
+200
+
+5)  Add yourself as a new student (your name, your age...) 
+Answer:INSERT INTO students VALUES (7,'Mohammad',23,'M',250);
+
+Answer: INSERT INTO students VALUES (7, 'Mohammad', 23, 'M',  100);
+6) ncrease the points of Basma because she solved a new exercise 
+
+7)  Decrease the points of Alex because he's late today 
+Answer:UPDATE students
+SET Points = 150
+WHERE name = "Alex";
+
