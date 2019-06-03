@@ -1,0 +1,74 @@
+.App
+{
+    width: 100%;
+    display: grid;
+    grid-template-areas: 
+    " div1 , "
+    "image1 .  "
+    "ifr , ";
+    
+}
+.div1 
+{
+    grid-area: div1;
+    margin-top:10px;
+}
+.image1
+{
+    grid-area: image1;
+    width: auto;
+    
+
+  
+}
+.ifr
+{
+    grid-area: ifr;
+    padding-top:80px;
+    
+}
+.image
+{
+    position: relative;
+    right:28%;
+    width: 130px;
+    height:25px;
+    padding-top:18px;
+}
+
+ .Image a
+{
+    display: none;
+
+}
+button
+{
+    width:60px;
+    height: 31px;
+    position: absolute;
+    right:313px;
+    top: 14.5px;
+}
+.search 
+{
+    width: 20px;
+    height:25px;
+    position: relative;
+    right:-640px;
+    top: 7px;
+    z-index: 2;
+}
+input
+{
+    width:600px;
+    height: 25px;
+    z-index:1;
+}
+.ifr iframe
+{
+    width: 83%;
+    height: 469px;
+    position: relative;
+    left: -260px;
+
+}
