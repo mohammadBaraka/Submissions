@@ -33,3 +33,32 @@ Answer:UPDATE students
 SET Points = 150
 WHERE name = "Alex";
 
+
+creating table:
+
+Layal graduated on 08/09/2018. Create a table graduates that includes:
+
+Answer:CREATE TABLE graduates (ID INT NOT NULL PRIMARY KEY ,AUTOINCREMENT,
+name varchar(255) NOT NULL UNIQUE ,
+Age INT ,
+Gander varchar(255),
+Points INT ,
+Graduation datetime
+
+);
+
+1)Copy Layal's data from students to graduates
+Answer:INSERT INTO graduates (id,name,Age,gender,points)
+SELECT * FROM students
+where id=4
+
+
+2) Add the graduation date previously mentioned to Layal's record in graduates
+
+Answer:UPDATE graduates
+SET Id = 1
+WHERE Graduation = "08/09/2018";
+
+3)Remove Layal's record from students
+Answer:DELETE FROM students 
+WHERE id = 4;
