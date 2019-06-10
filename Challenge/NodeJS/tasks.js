@@ -36,6 +36,7 @@ function startApp(name){
  */
 function onDataReceived(text) { 
   var arg = text.split(' ');
+  var abc = text.split(' ');
   if (text === 'quit\n'|| text === 'exit\n') {
     quit();
   }
@@ -44,6 +45,9 @@ function onDataReceived(text) {
   }
   else if(text==="help\n"){
     help();
+  }
+  else if(abc[0]==='add'||text==='add\n'){
+    add(abc,tasks);
   }
   else if(text==="list\n"){
     myFuncton(tasks);
@@ -98,4 +102,14 @@ function myFuncton(mbArray){
 for(var i = 0;i<mbArray.length;i++){
 console.log(i+1+" "+ mbArray[i]);
 }
+}
+function add (add1,add2){
+  if (add1[1]){
+    add1.shift();
+    add2.push(add1.join(" "));
+  }
+  else{
+    console.log("error")
+  }
+
 }
