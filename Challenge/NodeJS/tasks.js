@@ -76,7 +76,7 @@ function hello(param){
 }
 /* if yoy write help you can see all commands*/
 function help (){
-  console.log("hello! \n Quitting now, goodbye! \n unknown command \n Mohammad Barakat ")
+  console.log("you can now add another word with hello and you can now add ! \n Quitting now, goodbye! \n unknown command \n Mohammad Barakat ")
 }
 /**
  * Exits the application
