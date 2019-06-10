@@ -1,3 +1,4 @@
+var tasks = ['tasks1','tasks2','tasks3','tasks4'];
 
 /**
  * Starts the application
@@ -44,6 +45,9 @@ function onDataReceived(text) {
   else if(text==="help\n"){
     help();
   }
+  else if(text==="list\n"){
+    myFuncton(tasks);
+  }
   else{
     unknownCommand(text);
   }
@@ -89,4 +93,9 @@ function quit(){
 }
 
 // The following line starts the application
-startApp("Mohammad Barakat")
+startApp("Mohammad Barakat");
+function myFuncton(mbArray){
+for(var i = 0;i<mbArray.length;i++){
+console.log(i+1+" "+ mbArray[i]);
+}
+}
