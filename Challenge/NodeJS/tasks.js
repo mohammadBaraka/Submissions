@@ -40,10 +40,17 @@ function onDataReceived(text) {
   else if(text === 'hello\n'){
     hello();
   }
+  else if(text==="help\n"){
+    help();
+  }
   else{
     unknownCommand(text);
   }
+  
 }
+
+
+
 
 
 /**
@@ -67,7 +74,9 @@ function hello(){
   console.log('hello!')
 }
 
-
+function help (){
+  console.log("hello! \n Quitting now, goodbye! \n unknown command \n Mohammad Barakat ")
+}
 /**
  * Exits the application
  *
