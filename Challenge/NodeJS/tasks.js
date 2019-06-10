@@ -33,12 +33,13 @@ function startApp(name){
  * @param  {string} text data typed by the user
  * @returns {void}
  */
-function onDataReceived(text) {
+function onDataReceived(text) { 
+  var arg = text.split(' ');
   if (text === 'quit\n'|| text === 'exit\n') {
     quit();
   }
-  else if(text === 'hello\n'){
-    hello();
+  else if(arg[0] === 'hello' || text === 'hello\n'){
+    hello(arg);
   }
   else if(text==="help\n"){
     help();
@@ -70,10 +71,10 @@ function unknownCommand(c){
  *
  * @returns {void}
  */
-function hello(){
-  console.log('hello!')
+function hello(param){
+  console.log(param.join(' ').replace("\n","!"))
 }
-
+/* if yoy write help you can see all commands*/
 function help (){
   console.log("hello! \n Quitting now, goodbye! \n unknown command \n Mohammad Barakat ")
 }
