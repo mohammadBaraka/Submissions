@@ -37,6 +37,7 @@ function startApp(name){
 function onDataReceived(text) { 
   var arg = text.split(' ');
   var abc = text.split(' ');
+  //console.log(arg)text
   if (text === 'quit\n'|| text === 'exit\n') {
     quit();
   }
@@ -51,6 +52,9 @@ function onDataReceived(text) {
   }
   else if(text==="list\n"){
     myFuncton(tasks);
+  }
+  else if(arg[0].trim()==="remove"){
+    remove(arg);
   }
   else{
     unknownCommand(text);
@@ -112,4 +116,19 @@ function add (add1,add2){
     console.log("error")
   }
 
+}
+function remove(arg)
+{
+  if(arg[0]=='remove\n'){
+    tasks.pop()
+  }
+  else if (arg[1]==1){
+    tasks.shift()
+  }
+  else if (arg[1]==2){
+    tasks.splice(1,1)
+  }
+  else{
+    console.log("Null")
+  }
 }
