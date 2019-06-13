@@ -21,6 +21,28 @@
    
     app.get('/movies/create',(req,res)=>{})
     app.get('/movies/read',(req,res)=>{res.send({status:200, data: movie})})
+    
+    app.get('/movies/read/by-date', (req,res)=>{  res.send({status:200, data:movie.sort(function(a,b) {
+    return a.year - b.year;
+    })
+    })
+    })
+
+    app.get('/movies/read/by-rating',(req,res)=>{res.send({status:200, data: movie.sort(function(a,b) {       
+    return b.rating - a.rating;
+    })
+    })
+    })
+
+    app.get('/movies/read/by-title',(req,res)=>{
+    res.send({status:200, data:
+    movie.sort(function(a,b) {
+    var x = a.title.toLowerCase();
+    var y = b.title.toLowerCase();
+    return x < y ? -1 : x > y ? 1 : 0;
+    })
+    })
+    })
     app.get('/movies/update',(req,res)=>{})
     app.get('/movies/delete',(req,res)=>{})
 
