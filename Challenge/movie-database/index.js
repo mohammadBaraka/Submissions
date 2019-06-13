@@ -83,3 +83,15 @@
     }
 
     })
+    /*Step 9 - DELETE*/
+    app.delete('/movies/delete/:id',(req,res)=>{
+
+    if(req.params.id >=0 && req.params.id < movies.length){
+    movies.splice(req.params.id,1)
+
+    res.send({status:200, data: movies})
+    }
+    else{
+    res.send({status:403, error:true, message:'you cannot create a movie without providing a title and a year'})
+    }
+    })
