@@ -16,7 +16,7 @@
     else { res.send ({ status:200, message:"Hello," })} });
 
 /*step5 Set up the basis for CRUD*/
-    const movie = [
+    const movies = [
         { title: 'Jaws', year: 1975, rating: 8 },
         { title: 'Avatar', year: 2009, rating: 7.8 },
         { title: 'Brazil', year: 1985, rating: 8 },
@@ -29,16 +29,17 @@
     }
     else {
     res.send({status:500, error:true, message:"you have to provide a search"}) } } );
-    app.get('/movies/create',(req,res)=>{})
-    app.get('/movies/read',(req,res)=>{res.send({status:200, data: movie})})
 
-    app.get('/movies/read/by-date', (req,res)=>{  res.send({status:200, data:movie.sort(function(a,b) {
+    app.get('/movies/create',(req,res)=>{})
+    app.get('/movies/read',(req,res)=>{res.send({status:200, data: movies})})
+
+    app.get('/movies/read/by-date', (req,res)=>{  res.send({status:200, data:movies.sort(function(a,b) {
     return a.year - b.year;
     })
     })
     })
 
-    app.get('/movies/read/by-rating',(req,res)=>{res.send({status:200, data: movie.sort(function(a,b) {       
+    app.get('/movies/read/by-rating',(req,res)=>{res.send({status:200, data: movies.sort(function(a,b) {       
     return b.rating - a.rating;
     })
     })
@@ -46,7 +47,7 @@
 
     app.get('/movies/read/by-title',(req,res)=>{
     res.send({status:200, data:
-    movie.sort(function(a,b) {
+    movies.sort(function(a,b) {
     var x = a.title.toLowerCase();
     var y = b.title.toLowerCase();
     return x < y ? -1 : x > y ? 1 : 0;
